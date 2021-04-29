@@ -1,5 +1,4 @@
 module.exports = ({ env }) => {
-  console.log(env('NODE_ENV'))
  if(env('NODE_ENV') === "development"){
   return ({
       defaultConnection: 'default',
