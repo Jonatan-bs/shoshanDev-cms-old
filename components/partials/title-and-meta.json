@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_partials_title_and_metas",
+  "info": {
+    "name": "titleAndMeta",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "unique": false,
+      "required": true
+    }
+  }
+}

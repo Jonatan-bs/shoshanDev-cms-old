@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/28/2021 9:42:57 AM"
+    "x-generation-date": "04/29/2021 1:17:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4116,7 +4116,8 @@
     "schemas": {
       "Frontpage": {
         "required": [
-          "id"
+          "id",
+          "titleAndMeta"
         ],
         "properties": {
           "id": {
@@ -4301,7 +4302,8 @@
                     "id",
                     "hide_title",
                     "title",
-                    "no_front"
+                    "no_front",
+                    "titleAndMeta"
                   ],
                   "properties": {
                     "id": {
@@ -4327,6 +4329,9 @@
                     },
                     "no_front": {
                       "type": "boolean"
+                    },
+                    "titleAndMeta": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"
@@ -4360,10 +4365,31 @@
                 }
               }
             }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewFrontpage": {
+        "required": [
+          "titleAndMeta"
+        ],
         "properties": {
           "subtext": {
             "type": "string"
@@ -4544,7 +4570,8 @@
                     "id",
                     "hide_title",
                     "title",
-                    "no_front"
+                    "no_front",
+                    "titleAndMeta"
                   ],
                   "properties": {
                     "id": {
@@ -4570,6 +4597,9 @@
                     },
                     "no_front": {
                       "type": "boolean"
+                    },
+                    "titleAndMeta": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"
@@ -4601,6 +4631,24 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
               }
             }
           },
@@ -4651,7 +4699,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -4677,6 +4726,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -4725,7 +4777,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -4751,6 +4804,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -4803,7 +4859,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -4829,6 +4886,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -4877,7 +4937,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -4903,6 +4964,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -4933,7 +4997,8 @@
           "id",
           "hide_title",
           "title",
-          "no_front"
+          "no_front",
+          "titleAndMeta"
         ],
         "properties": {
           "id": {
@@ -5567,7 +5632,8 @@
               "id",
               "hide_title",
               "title",
-              "no_front"
+              "no_front",
+              "titleAndMeta"
             ],
             "properties": {
               "id": {
@@ -5594,6 +5660,9 @@
               "no_front": {
                 "type": "boolean"
               },
+              "titleAndMeta": {
+                "type": "component"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -5615,6 +5684,24 @@
           "no_front": {
             "type": "boolean",
             "default": false
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -5622,7 +5709,8 @@
         "required": [
           "hide_title",
           "title",
-          "no_front"
+          "no_front",
+          "titleAndMeta"
         ],
         "properties": {
           "slug": {
@@ -6265,6 +6353,24 @@
             "type": "boolean",
             "default": false
           },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "type": "string"
           },
@@ -6275,7 +6381,8 @@
       },
       "Project": {
         "required": [
-          "id"
+          "id",
+          "titleAndMeta"
         ],
         "properties": {
           "id": {
@@ -6984,6 +7091,24 @@
               ]
             }
           },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6991,6 +7116,9 @@
         }
       },
       "NewProject": {
+        "required": [
+          "titleAndMeta"
+        ],
         "properties": {
           "title": {
             "type": "string"
@@ -7559,6 +7687,24 @@
                   ]
                 }
               ]
+            }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
             }
           },
           "published_at": {

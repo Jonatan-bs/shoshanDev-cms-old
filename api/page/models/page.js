@@ -42,12 +42,20 @@ const sanitizeData = async (data) => {
   return data;
 };
 
+const setTitleandmetaBoxTitle = async (data) => {
+  if (data.title && !data.titleAndMeta.title) {
+    data.titleAndMeta.title = data.title
+  }
+  return data;
+};
+
 module.exports = {
   lifecycles: {
     beforeCreate: async (data) => {
       // On initial creation, we only need to sanitze
       // the data as it's not possible for this page to
       // be the parent page of another page just yet
+      data = await setTitleandmetaBoxTitle(data);
       data = await sanitizeData(data);
     },
     beforeUpdate: async (params, data) => {
@@ -62,6 +70,7 @@ module.exports = {
       if (parseInt(params.id) === data.parent_page) data.parent_page = null;
 
       data = await sanitizeData(data);
+      data = await setTitleandmetaBoxTitle(data);
     },
     afterUpdate: async (params, data) => {
       // If we've updated a page, check to see if it

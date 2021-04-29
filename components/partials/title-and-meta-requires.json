@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_partials_title_and_meta_requires",
+  "info": {
+    "name": "TitleAndMetaRequires",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

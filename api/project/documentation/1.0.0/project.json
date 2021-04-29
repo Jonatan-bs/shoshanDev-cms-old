@@ -584,7 +584,8 @@
     "schemas": {
       "Project": {
         "required": [
-          "id"
+          "id",
+          "titleAndMeta"
         ],
         "properties": {
           "id": {
@@ -1293,6 +1294,24 @@
               ]
             }
           },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -1300,6 +1319,9 @@
         }
       },
       "NewProject": {
+        "required": [
+          "titleAndMeta"
+        ],
         "properties": {
           "title": {
             "type": "string"
@@ -1868,6 +1890,24 @@
                   ]
                 }
               ]
+            }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
             }
           },
           "published_at": {

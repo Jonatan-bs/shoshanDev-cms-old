@@ -45,6 +45,12 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "titleAndMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partials.title-and-meta",
+      "required": true
     }
   }
 }

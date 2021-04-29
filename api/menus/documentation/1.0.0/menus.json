@@ -349,7 +349,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -375,6 +376,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -423,7 +427,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -449,6 +454,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -501,7 +509,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -527,6 +536,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"
@@ -575,7 +587,8 @@
                         "id",
                         "hide_title",
                         "title",
-                        "no_front"
+                        "no_front",
+                        "titleAndMeta"
                       ],
                       "properties": {
                         "id": {
@@ -601,6 +614,9 @@
                         },
                         "no_front": {
                           "type": "boolean"
+                        },
+                        "titleAndMeta": {
+                          "type": "component"
                         },
                         "created_by": {
                           "type": "string"

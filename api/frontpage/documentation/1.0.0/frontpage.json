@@ -312,7 +312,8 @@
     "schemas": {
       "Frontpage": {
         "required": [
-          "id"
+          "id",
+          "titleAndMeta"
         ],
         "properties": {
           "id": {
@@ -497,7 +498,8 @@
                     "id",
                     "hide_title",
                     "title",
-                    "no_front"
+                    "no_front",
+                    "titleAndMeta"
                   ],
                   "properties": {
                     "id": {
@@ -523,6 +525,9 @@
                     },
                     "no_front": {
                       "type": "boolean"
+                    },
+                    "titleAndMeta": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"
@@ -556,10 +561,31 @@
                 }
               }
             }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewFrontpage": {
+        "required": [
+          "titleAndMeta"
+        ],
         "properties": {
           "subtext": {
             "type": "string"
@@ -740,7 +766,8 @@
                     "id",
                     "hide_title",
                     "title",
-                    "no_front"
+                    "no_front",
+                    "titleAndMeta"
                   ],
                   "properties": {
                     "id": {
@@ -766,6 +793,9 @@
                     },
                     "no_front": {
                       "type": "boolean"
+                    },
+                    "titleAndMeta": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"
@@ -797,6 +827,24 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "titleAndMeta": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
               }
             }
           },
