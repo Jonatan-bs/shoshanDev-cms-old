@@ -1,18 +1,38 @@
 module.exports = ({ env }) => {
- return ({
-    defaultConnection: 'default',
-    connections: {
-      default: {
-        connector: 'mongoose',
-        settings: {
-          "client": "mongo",
-          "uri": env('DATABASE_URI'),
-        },
-        options: {
-          authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-          ssl: env.bool('DATABASE_SSL', true),
+  console.log(env('NODE_ENV'))
+ if(env('NODE_ENV') === "development"){
+  return ({
+      defaultConnection: 'default',
+      connections: {
+        default: {
+          connector: 'mongoose',
+          settings: {
+            "client": "mongo",
+            "uri": env('DATABASE_URI_DEV'),
+          },
+          options: {
+            authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+            ssl: env.bool('DATABASE_SSL', true),
+          },
         },
       },
-    },
-  });
+    });
+  } else {
+    return ({
+      defaultConnection: 'default',
+      connections: {
+        default: {
+          connector: 'mongoose',
+          settings: {
+            "client": "mongo",
+            "uri": env('DATABASE_URI'),
+          },
+          options: {
+            authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+            ssl: env.bool('DATABASE_SSL', true),
+          },
+        },
+      },
+    });
+  }
 }
