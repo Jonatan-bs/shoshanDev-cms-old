@@ -607,7 +607,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -704,93 +703,26 @@
                           }
                         }
                       }
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page-content.small-boxes",
-                        "page-content.banner",
-                        "page-content.heading",
-                        "page-content.image-and-text",
-                        "page-content.text",
-                        "page-content.contact-box",
-                        "page-content.media"
-                      ]
                     },
-                    "id": {
-                      "type": "string"
-                    },
-                    "image": {
+                    "bottomSpacing": {
+                      "type": "object",
                       "required": [
                         "id",
-                        "name",
-                        "hash",
-                        "mime",
-                        "size",
-                        "url",
-                        "provider"
+                        "size"
                       ],
                       "properties": {
                         "id": {
                           "type": "string"
                         },
-                        "name": {
-                          "type": "string"
-                        },
-                        "alternativeText": {
-                          "type": "string"
-                        },
-                        "caption": {
-                          "type": "string"
-                        },
-                        "width": {
-                          "type": "integer"
-                        },
-                        "height": {
-                          "type": "integer"
-                        },
-                        "formats": {
-                          "type": "object"
-                        },
-                        "hash": {
-                          "type": "string"
-                        },
-                        "ext": {
-                          "type": "string"
-                        },
-                        "mime": {
-                          "type": "string"
-                        },
                         "size": {
-                          "type": "number"
-                        },
-                        "url": {
-                          "type": "string"
-                        },
-                        "previewUrl": {
-                          "type": "string"
-                        },
-                        "provider": {
-                          "type": "string"
-                        },
-                        "provider_metadata": {
-                          "type": "object"
-                        },
-                        "related": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
                         }
                       }
                     }
@@ -805,7 +737,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -816,30 +747,8 @@
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
+                    "title": {
                       "type": "string"
-                    },
-                    "tag": {
-                      "type": "string",
-                      "default": "h2",
-                      "enum": [
-                        "h1",
-                        "h2",
-                        "h3",
-                        "h4",
-                        "h5",
-                        "h6"
-                      ]
-                    },
-                    "size": {
-                      "type": "string",
-                      "default": "md",
-                      "enum": [
-                        "sm",
-                        "md",
-                        "lg",
-                        "xl"
-                      ]
                     },
                     "align": {
                       "type": "string",
@@ -849,12 +758,41 @@
                         "center",
                         "right"
                       ]
+                    },
+                    "tag": {
+                      "type": "string",
+                      "enum": [
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4"
+                      ]
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
                     "id",
-                    "tag",
-                    "size",
                     "align"
                   ]
                 },
@@ -864,7 +802,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -958,11 +895,38 @@
                     },
                     "imageBG": {
                       "type": "string"
+                    },
+                    "fill": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
                     "id",
-                    "imageRight"
+                    "imageRight",
+                    "fill"
                   ]
                 },
                 {
@@ -971,7 +935,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -984,6 +947,28 @@
                     },
                     "content": {
                       "type": "string"
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -996,7 +981,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1079,6 +1063,28 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -1091,7 +1097,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1169,15 +1174,6 @@
                         }
                       }
                     },
-                    "width": {
-                      "type": "string"
-                    },
-                    "maxWidth": {
-                      "type": "string"
-                    },
-                    "paddingX": {
-                      "type": "number"
-                    },
                     "hideOnDevice": {
                       "type": "object",
                       "required": [
@@ -1208,10 +1204,44 @@
                           "default": false
                         }
                       }
+                    },
+                    "width": {
+                      "type": "string",
+                      "default": "md",
+                      "enum": [
+                        "md",
+                        "sm",
+                        "xs",
+                        "fluid",
+                        "full"
+                      ]
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "width"
                   ]
                 }
               ]
@@ -1316,7 +1346,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1413,93 +1442,26 @@
                           }
                         }
                       }
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page-content.small-boxes",
-                        "page-content.banner",
-                        "page-content.heading",
-                        "page-content.image-and-text",
-                        "page-content.text",
-                        "page-content.contact-box",
-                        "page-content.media"
-                      ]
                     },
-                    "id": {
-                      "type": "string"
-                    },
-                    "image": {
+                    "bottomSpacing": {
+                      "type": "object",
                       "required": [
                         "id",
-                        "name",
-                        "hash",
-                        "mime",
-                        "size",
-                        "url",
-                        "provider"
+                        "size"
                       ],
                       "properties": {
                         "id": {
                           "type": "string"
                         },
-                        "name": {
-                          "type": "string"
-                        },
-                        "alternativeText": {
-                          "type": "string"
-                        },
-                        "caption": {
-                          "type": "string"
-                        },
-                        "width": {
-                          "type": "integer"
-                        },
-                        "height": {
-                          "type": "integer"
-                        },
-                        "formats": {
-                          "type": "object"
-                        },
-                        "hash": {
-                          "type": "string"
-                        },
-                        "ext": {
-                          "type": "string"
-                        },
-                        "mime": {
-                          "type": "string"
-                        },
                         "size": {
-                          "type": "number"
-                        },
-                        "url": {
-                          "type": "string"
-                        },
-                        "previewUrl": {
-                          "type": "string"
-                        },
-                        "provider": {
-                          "type": "string"
-                        },
-                        "provider_metadata": {
-                          "type": "object"
-                        },
-                        "related": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
                         }
                       }
                     }
@@ -1514,7 +1476,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1525,30 +1486,8 @@
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
+                    "title": {
                       "type": "string"
-                    },
-                    "tag": {
-                      "type": "string",
-                      "default": "h2",
-                      "enum": [
-                        "h1",
-                        "h2",
-                        "h3",
-                        "h4",
-                        "h5",
-                        "h6"
-                      ]
-                    },
-                    "size": {
-                      "type": "string",
-                      "default": "md",
-                      "enum": [
-                        "sm",
-                        "md",
-                        "lg",
-                        "xl"
-                      ]
                     },
                     "align": {
                       "type": "string",
@@ -1558,12 +1497,41 @@
                         "center",
                         "right"
                       ]
+                    },
+                    "tag": {
+                      "type": "string",
+                      "enum": [
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4"
+                      ]
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
                     "id",
-                    "tag",
-                    "size",
                     "align"
                   ]
                 },
@@ -1573,7 +1541,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1667,11 +1634,38 @@
                     },
                     "imageBG": {
                       "type": "string"
+                    },
+                    "fill": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
                     "id",
-                    "imageRight"
+                    "imageRight",
+                    "fill"
                   ]
                 },
                 {
@@ -1680,7 +1674,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1693,6 +1686,28 @@
                     },
                     "content": {
                       "type": "string"
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -1705,7 +1720,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1788,6 +1802,28 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -1800,7 +1836,6 @@
                       "type": "string",
                       "enum": [
                         "page-content.small-boxes",
-                        "page-content.banner",
                         "page-content.heading",
                         "page-content.image-and-text",
                         "page-content.text",
@@ -1878,15 +1913,6 @@
                         }
                       }
                     },
-                    "width": {
-                      "type": "string"
-                    },
-                    "maxWidth": {
-                      "type": "string"
-                    },
-                    "paddingX": {
-                      "type": "number"
-                    },
                     "hideOnDevice": {
                       "type": "object",
                       "required": [
@@ -1917,10 +1943,44 @@
                           "default": false
                         }
                       }
+                    },
+                    "width": {
+                      "type": "string",
+                      "default": "md",
+                      "enum": [
+                        "md",
+                        "sm",
+                        "xs",
+                        "fluid",
+                        "full"
+                      ]
+                    },
+                    "bottomSpacing": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "size"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "string",
+                          "default": "md",
+                          "enum": [
+                            "none",
+                            "sm",
+                            "md",
+                            "lg"
+                          ]
+                        }
+                      }
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "width"
                   ]
                 }
               ]

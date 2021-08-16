@@ -17,7 +17,7 @@
     "subtitle": {
       "type": "component",
       "repeatable": true,
-      "component": "projects.project-elements"
+      "component": "partials.project-elements"
     },
     "text": {
       "type": "richtext"
@@ -58,7 +58,6 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "page-content.banner",
         "page-content.heading",
         "page-content.small-boxes",
         "page-content.image-and-text",

@@ -18,7 +18,6 @@
       "type": "dynamiczone",
       "components": [
         "page-content.small-boxes",
-        "page-content.banner",
         "page-content.heading",
         "page-content.image-and-text",
         "page-content.text",

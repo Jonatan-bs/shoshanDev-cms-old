@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_partials_bottom_spacings",
+  "info": {
+    "name": "bottomSpacing",
+    "icon": "arrow-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "sm",
+        "md",
+        "lg"
+      ],
+      "default": "md",
+      "required": true
+    }
+  }
+}

@@ -11,6 +11,12 @@
       "type": "component",
       "repeatable": true,
       "component": "partials.small-box"
+    },
+    "bottomSpacing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partials.bottom-spacing",
+      "required": false
     }
   }
 }

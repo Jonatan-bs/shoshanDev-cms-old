@@ -2,12 +2,19 @@
   "collectionName": "components_page_content_texts",
   "info": {
     "name": "text",
-    "icon": "bookmark"
+    "icon": "bookmark",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "content": {
       "type": "richtext"
+    },
+    "bottomSpacing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partials.bottom-spacing",
+      "required": false
     }
   }
 }

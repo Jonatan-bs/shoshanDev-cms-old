@@ -37,6 +37,17 @@
     },
     "imageBG": {
       "type": "string"
+    },
+    "fill": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "bottomSpacing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partials.bottom-spacing",
+      "required": false
     }
   }
 }

@@ -403,6 +403,28 @@
                     "type": "string"
                   }
                 }
+              },
+              "bottomSpacing": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "size"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string",
+                    "default": "md",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "md",
+                      "lg"
+                    ]
+                  }
+                }
               }
             }
           },
@@ -669,6 +691,28 @@
                   },
                   "updated_by": {
                     "type": "string"
+                  }
+                }
+              },
+              "bottomSpacing": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "size"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string",
+                    "default": "md",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "md",
+                      "lg"
+                    ]
                   }
                 }
               }
