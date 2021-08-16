@@ -594,6 +594,23 @@
           "title": {
             "type": "string"
           },
+          "subtitle": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "element": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "text": {
             "type": "string"
           },
@@ -1318,6 +1335,23 @@
         "properties": {
           "title": {
             "type": "string"
+          },
+          "subtitle": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "element": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "text": {
             "type": "string"
